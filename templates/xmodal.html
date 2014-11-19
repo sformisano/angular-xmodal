@@ -1,0 +1,34 @@
+<div id="xmodal"
+  ng-class="{visible: xmodalVisible, above: xmodalAbove}"
+  xclick="close()">
+
+  <div id="xmodal-inner">
+    <div id="xmodal-content-wrapper" xclick="close()">
+      <div id="xmodal-content" class="{{xmodal.type}}">
+        <button id="close-xmodal"
+          ng-if="xmodal.type === 'dialog'"
+          xclick="close()">X</button>
+          
+        <h3 ng-if="xmodal.title" ng-bind-html="xmodal.title"></h3>
+
+        <div class="xmodal-body"
+          ng-if="xmodal.bodyHtml"
+          ng-bind-html="xmodal.bodyHtml"></div>
+          
+        <div class="xmodal-body"
+          ng-if="xmodal.bodyTemplate"
+          ng-include="xmodal.bodyTemplate"></div>
+
+        <div ng-if="xmodal.type === 'dialog'" id="xmodal-answers">
+          <button class="cancel"
+            ng-if="xmodal.cancelLabel"
+            ng-click="dialogCancel()">{{xmodal.cancelLabel}}</button>
+
+          <button class="confirm"
+            ng-if="xmodal.confirmLabel"
+            ng-click="dialogConfirm()">{{xmodal.confirmLabel}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
