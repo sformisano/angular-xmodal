@@ -5,10 +5,7 @@
     "Salvatore Formisano <formisanosalvatore@gmail.com>"
   ],
   "main": [
-    "angular-xmodal.js",
-    "directives/xmodal.js",
-    "services/xmodal-service.js",
-    "templates/xmodal.html"
+    "dist/angular-xmodal.js"
   ],
   "license": "MIT",
   "ignore": [

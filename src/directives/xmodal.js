@@ -5,7 +5,7 @@ angular.module('angular-xmodal')
     return {
       restrict: 'E',
       replace: true,
-      templateUrl: 'bower_components/angular-xmodal/templates/xmodal.html',
+      templateUrl: 'templates/xmodal.html',
       controller: function($scope){
         function _hide(){
           $scope.xmodalVisible = false;
