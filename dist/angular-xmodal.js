@@ -117,8 +117,8 @@ angular.module('angular-xmodal')
     };
   });
 (function(module) {
-try { module = angular.module("angular-xmodal-templates"); }
-catch(err) { module = angular.module("angular-xmodal-templates", []); }
+try { module = angular.module("angular-xmodal"); }
+catch(err) { module = angular.module("angular-xmodal", []); }
 module.run(["$templateCache", function($templateCache) {
   "use strict";
   $templateCache.put("templates/xmodal.html",

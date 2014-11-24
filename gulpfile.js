@@ -10,7 +10,7 @@ gulp.task('html2js', function(){
     .pipe(html2js({
       base: 'src',
       useStrict: true,
-      outputModuleName: 'angular-xmodal-templates'
+      outputModuleName: 'angular-xmodal'
     }))
     .pipe(concat('angular-xmodal-templates.js'))
     .pipe(gulp.dest('./.tmp/'));
